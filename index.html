@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./flickity-docs/flickity.css" media="screen" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Sushi Pan Manila</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img class="logo" src="./images/logo.png" alt="sushi pan logo" />
+        <nav>
+          <ul id="menuList">
+            <li><a href="#home" class="">HOME</a></li>
+            <li><a href="#menu" class="">MENU</a></li>
+            <li><a href="#contact" class="">CONTACT</a></li>
+          </ul>
+        </nav>
+        <img class="menu-logo" src="./images/menu.png" alt="menu-logo" onclick="togglemenu()"/>
+      </div>
+
+      <div class="banner">
+        </div>
+        <div class="carousel" data-flickity='{ "autoPlay": 5000, "wrapAround": true }'>
+  <div class="carousel-cell">
+<img src="./images/sushi.jpg" alt="sushi" />
+  </div>
+  <div class="carousel-cell">
+      <img src="./images/collab.jpg" alt="collab" />
+  </div>
+  <div class="carousel-cell">
+      <img src="./images/sauce.jpg" alt="sauce" />
+  </div>
+  <div class="carousel-cell">
+      <h1><br>CRAVING?</h1> 
+      <h1 id="yes"><br><br>YES.</h1> 
+  </div>
+  <div class="carousel-cell">
+      <img src="./images/mixed.jpg" alt="mixed" />
+  </div>
+</div>
+
+      </div>
+    </div>
+
+
+
+<script src="./flickity-docs/flickity.pkgd.js">
+
+
+</script>
+
+    <script>
+      var menuList = document.getElementById("menuList");
+
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "130px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+
+  </body>
+</html>
