@@ -1,36 +1,54 @@
+@import url(//db.onlinewebfonts.com/c/578ebf91174f9ab5683a66c2609ab000?family=TradeGothicW02-BoldCn20);
+
+@font-face {
+  font-family: "TradeGothicW02-BoldCn20";
+  src: url("//db.onlinewebfonts.com/t/578ebf91174f9ab5683a66c2609ab000.eot");
+  src: url("//db.onlinewebfonts.com/t/578ebf91174f9ab5683a66c2609ab000.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/578ebf91174f9ab5683a66c2609ab000.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/578ebf91174f9ab5683a66c2609ab000.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/578ebf91174f9ab5683a66c2609ab000.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/578ebf91174f9ab5683a66c2609ab000.svg#TradeGothicW02-BoldCn20")
+      format("svg");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Signika", "Roboto", sans-serif;
+  font-family: "TradeGothicW02-BoldCn20";
 }
 
 .container {
   min-height: 100vh;
   width: 100%;
-  background-color: #ef754e;
-  padding-left: 8%;
-  padding-right: 8%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .navbar {
   width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
   display: flex;
   align-items: center;
+  background-color: #f17555;
 }
 
 .logo {
-  width: 7rem;
+  width: 18rem;
   cursor: pointer;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
-.menu-logo {
-  margin-top: -1rem;
-  height: 3rem;
-  width: 4rem;
+span {
+  height: 0.3rem;
+  width: 3rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
   cursor: pointer;
   display: none;
 }
@@ -43,119 +61,135 @@ nav {
 nav ul li {
   list-style: none;
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 40px;
+  margin-top: -2rem;
 }
 
 nav ul li a {
   font-size: 1.5rem;
   text-decoration: none;
-  color: black;
+  color: white;
+  border: solid 1px transparent;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
-  color: #0d2405;
+  border: 1px solid white;
+  background-color: white;
+  color: #f17555;
 }
 
-.carousel {
-  background: #ef754e;
-  height: 25rem;
+nav ul li a:active {
+  border: 1px solid white;
+  background-color: white;
+  color: #f17555;
 }
 
-.carousel-cell {
+/* FOR TESTING ONLY */
+
+body {
+  margin: 0;
+  background-color: white;
+}
+#parallax {
   position: relative;
-  width: 66%;
-  height: 400px;
-  margin-right: 10px;
-  background: ef754e;
-  border-radius: 5px;
-}
-
-.carousel-cell img {
-  position: absolute;
-  align-items: center;
+  width: 100%;
   height: 100vh;
-  width: 100vh;
+  background-image: url("/images/chopstick.png"), url("/images/bgbgbg.png"),
+    url("/images/sushi2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
 }
 
-.carousel-cell h1 {
-  position: absolute;
-  align-items: center;
-  font-size: 5rem;
-  justify-content: center;
-  color: white;
-}
+/* FOR TESTING ONLY */
 
-.carousel-cell #yes {
-  position: absolute;
-  align-items: center;
-  font-size: 4.5rem;
-  right: -0.5rem;
-  top: 5rem;
-  color: white;
-}
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
   nav ul {
     width: 100%;
-    background: #e0400a;
+    background: #f17555;
     position: absolute;
-    top: 8rem;
+    top: 9rem;
     right: 0;
     z-index: 2;
   }
   nav ul li {
     display: block;
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
   }
 
   nav ul li a {
-    color: #000;
-  }
-  .carousel {
-    background: #ef754e;
-    height: 25rem;
-  }
-
-  .carousel-cell {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin-right: 10px;
-    background: #ef754e;
-    border-radius: 5px;
-  }
-
-  .carousel-cell img {
-    position: absolute;
-    align-items: center;
-    height: 40vh;
-    width: 40vh;
-  }
-
-  .carousel-cell h1 {
-    position: absolute;
-    align-items: center;
-    font-size: 4.5rem;
-    justify-content: center;
+    font-size: 2.75rem;
     color: white;
   }
 
-  .carousel-cell #yes {
-    position: absolute;
-    align-items: center;
-    font-size: 4.5rem;
-    right: -0.5rem;
-    top: 5rem;
-    color: white;
-  }
-
-  .menu-logo {
+  .menu-logo span {
     display: block;
   }
 
   #menuList {
     overflow: hidden;
-    transition: 0.7s;
+    transition: 0.8s;
+  }
+
+  .logo {
+    display: block;
+    width: 15rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    nav ul {
+      width: 100%;
+      background: #f17555;
+      position: absolute;
+      top: 9rem;
+      right: 0;
+      z-index: 2;
+      /* opacity: 90%; */
+    }
+    nav ul li {
+      display: block;
+      /* border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 1rem; */
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+    }
+
+    nav ul li a {
+      font-size: 2.75rem;
+      color: white;
+    }
+
+    /* check this one again */
+    .menu-logo span {
+      display: block;
+    }
+
+    #menuList {
+      overflow: hidden;
+      transition: 0.8s;
+    }
+
+    .logo {
+      display: block;
+      width: 15rem;
+    }
+
+    /* .collapsed-logo {
+      display: block;
+    } */
+
+    .main-container img {
+      width: 100vh;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

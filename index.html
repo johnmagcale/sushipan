@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="./flickity-docs/flickity.css" media="screen" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap"
+      href="//db.onlinewebfonts.com/c/578ebf91174f9ab5683a66c2609ab000?family=TradeGothicW02-BoldCn20"
       rel="stylesheet"
+      type="text/css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Sushi Pan Manila</title>
@@ -16,47 +17,63 @@
   <body>
     <div class="container">
       <div class="navbar">
-        <img class="logo" src="./images/logo.png" alt="sushi pan logo" />
+        <img
+          class="logo"
+          src="./images/spm-white-pc.png"
+          alt="sushi pan logo"
+        />
         <nav>
           <ul id="menuList">
-            <li><a href="#home" class="">HOME</a></li>
-            <li><a href="#menu" class="">MENU</a></li>
+            <li><a href="#home" class="">MENU</a></li>
+            <li>
+              <a href="https:google.com" target="_blank" class="">FAQs</a>
+            </li>
+            <li><a href="#contact" class="">ORDER NOW</a></li>
             <li><a href="#contact" class="">CONTACT</a></li>
           </ul>
         </nav>
-        <img class="menu-logo" src="./images/menu.png" alt="menu-logo" onclick="togglemenu()"/>
+        <a href="#" class="menu-logo" onclick="togglemenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
-
-      <div class="banner">
-        </div>
-        <div class="carousel" data-flickity='{ "autoPlay": 5000, "wrapAround": true }'>
-  <div class="carousel-cell">
-<img src="./images/sushi.jpg" alt="sushi" />
-  </div>
-  <div class="carousel-cell">
-      <img src="./images/collab.jpg" alt="collab" />
-  </div>
-  <div class="carousel-cell">
-      <img src="./images/sauce.jpg" alt="sauce" />
-  </div>
-  <div class="carousel-cell">
-      <h1><br>CRAVING?</h1> 
-      <h1 id="yes"><br><br>YES.</h1> 
-  </div>
-  <div class="carousel-cell">
-      <img src="./images/mixed.jpg" alt="mixed" />
-  </div>
-</div>
-
+      <div id="parallax"><h1></h1></div>
+      <div class="main-container">
+        <img src="./images/sushi10.jpg" alt="sushi" />
       </div>
     </div>
 
+    <!-- FOR TESTING ONLY -->
 
+    <script>
+      (function () {
+        document.addEventListener("mousemove", parallax);
+        const elem = document.querySelector("#parallax");
+        function parallax(e) {
+          let _w = window.innerWidth / 2;
+          let _h = window.innerHeight / 2;
+          let _mouseX = e.clientX;
+          let _mouseY = e.clientY;
+          let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${
+            50 - (_mouseY - _h) * 0.01
+          }%`;
+          let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${
+            50 - (_mouseY - _h) * 0.02
+          }%`;
+          let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${
+            50 - (_mouseY - _h) * 0.06
+          }%`;
+          let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+          console.log(x);
+          elem.style.backgroundPosition = x;
+        }
+      })();
+    </script>
 
-<script src="./flickity-docs/flickity.pkgd.js">
+    <!-- FOR TESTING ONLY -->
 
-
-</script>
+    <script src="./flickity-docs/flickity.pkgd.js"></script>
 
     <script>
       var menuList = document.getElementById("menuList");
@@ -65,13 +82,11 @@
 
       function togglemenu() {
         if (menuList.style.maxHeight == "0px") {
-          menuList.style.maxHeight = "130px";
+          menuList.style.maxHeight = "100vh";
         } else {
           menuList.style.maxHeight = "0px";
         }
       }
     </script>
-
-
   </body>
 </html>
