@@ -95,8 +95,8 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("./images/chopstick.png"), url("./images/bgbgbg.png"),
-    url("./images/sushi2.png");
+  background-image: url("../images/chopstick.png"), url("../images/bgbgbg.png"),
+    url("../images/sushi2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-position: 50% 50%;
