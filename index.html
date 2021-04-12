@@ -17,18 +17,27 @@
   <body>
     <div class="container">
       <div class="navbar">
-        <img
-          class="logo"
-          src="./images/spm-white-pc.png"
-          alt="sushi pan logo"
-        />
+        <a href="#main-container"
+          ><img
+            class="logo"
+            src="./images/spm-white-pc.png"
+            alt="sushi pan logo"
+        /></a>
+
         <nav>
           <ul id="menuList">
-            <li><a href="#home" class="">MENU</a></li>
+            <li><a href="#menu" class="">MENU</a></li>
             <li>
-              <a href="https:google.com" target="_blank" class="">FAQs</a>
+              <a href="#FAQs" class="">FAQs</a>
             </li>
-            <li><a href="#contact" class="">ORDER NOW</a></li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="blank"
+                class=""
+                >ORDER NOW</a
+              >
+            </li>
             <li><a href="#contact" class="">CONTACT</a></li>
           </ul>
         </nav>
@@ -38,40 +47,46 @@
           <span></span>
         </a>
       </div>
-      <div id="parallax"><h1></h1></div>
-      <div class="main-container">
-        <img src="./images/sushi10.jpg" alt="sushi" />
-      </div>
+
+      <section id="main-container">
+        <h1 id="we-are">WE ARE</h1>
+        <h1 id="on-a-roll">ON A ROLL</h1>
+        <img src="./images/sushi10.jpg" alt="sushi" class="main-sushi" />
+      </section>
+
+      <section class="lower" id="menu">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nam!
+        </h1>
+      </section>
+      <section class="lower" id="FAQs">
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
+          sequi.
+        </h1>
+      </section>
+      <section class="lower" id="contact">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, dicta.
+        </h1>
+      </section>
     </div>
 
-    <!-- FOR TESTING ONLY -->
+    <footer>FOOTER</footer>
 
     <script>
-      (function () {
-        document.addEventListener("mousemove", parallax);
-        const elem = document.querySelector("#parallax");
-        function parallax(e) {
-          let _w = window.innerWidth / 2;
-          let _h = window.innerHeight / 2;
-          let _mouseX = e.clientX;
-          let _mouseY = e.clientY;
-          let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${
-            50 - (_mouseY - _h) * 0.01
-          }%`;
-          let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${
-            50 - (_mouseY - _h) * 0.02
-          }%`;
-          let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${
-            50 - (_mouseY - _h) * 0.06
-          }%`;
-          let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-          console.log(x);
-          elem.style.backgroundPosition = x;
-        }
-      })();
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset /
+              (document.body.offsetHeight - window.innerHeight)
+          );
+        },
+        false
+      );
     </script>
-
-    <!-- FOR TESTING ONLY -->
 
     <script src="./flickity-docs/flickity.pkgd.js"></script>
 
