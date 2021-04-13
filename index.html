@@ -13,8 +13,11 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Sushi Pan Manila</title>
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png"/>
   </head>
   <body>
+
+    
     <div class="container">
       <div class="navbar">
         <a href="#main-container"
@@ -26,6 +29,7 @@
 
         <nav>
           <ul id="menuList">
+            <li><a href="#" id="close-button" onclick="togglemenu()">X</a></li>
             <li><a href="#menu" class="">MENU</a></li>
             <li>
               <a href="#FAQs" class="">FAQs</a>
@@ -47,7 +51,6 @@
           <span></span>
         </a>
       </div>
-
       <section id="main-container">
         <h1 id="we-are">WE ARE</h1>
         <h1 id="on-a-roll">ON A ROLL</h1>
@@ -56,7 +59,7 @@
 
       <section class="lower" id="menu">
         <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nam!
+          Are you hungry?
         </h1>
       </section>
       <section class="lower" id="FAQs">
@@ -71,37 +74,7 @@
         </h1>
       </section>
     </div>
-
-    <footer>FOOTERFOOTERFOOTER</footer>
-
-    <script>
-      window.addEventListener(
-        "scroll",
-        () => {
-          document.body.style.setProperty(
-            "--scroll",
-            window.pageYOffset /
-              (document.body.offsetHeight - window.innerHeight)
-          );
-        },
-        false
-      );
-    </script>
-
-    <script src="./flickity-docs/flickity.pkgd.js"></script>
-
-    <script>
-      var menuList = document.getElementById("menuList");
-
-      menuList.style.maxHeight = "0px";
-
-      function togglemenu() {
-        if (menuList.style.maxHeight == "0px") {
-          menuList.style.maxHeight = "100vh";
-        } else {
-          menuList.style.maxHeight = "0px";
-        }
-      }
-    </script>
+    <footer style="color: white;">Copyright &copy; 2021</footer>
+    <script src="main.js"></script>
   </body>
 </html>

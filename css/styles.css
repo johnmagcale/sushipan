@@ -205,16 +205,17 @@ section {
   justify-content: center;
 }
 
-footer {
-  height: 5vh;
-  width: 100vw;
-  background-color: white;
+
+
+#close-button{
+  display: none;
 }
 
 @media only screen and (max-width: 700px) {
   * {
     scroll-behavior: smooth;
   }
+
 
   nav ul {
     width: 100%;
@@ -243,6 +244,20 @@ footer {
   #menuList {
     overflow: hidden;
     transition: 0.8s;
+  }
+
+  #close-button{
+    background: #f17555;
+    color: white;
+    display: block;
+    margin-right: 60%;
+    margin-left: 10%;
+    padding-right: .8rem;
+    padding-bottom: 3.7rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
   }
 
   .logo {
@@ -351,6 +366,20 @@ footer {
   #menuList {
     overflow: hidden;
     transition: 0.8s;
+  }
+
+  #close-button{
+    background: #f17555;
+    color: white;
+    display: block;
+    margin-right: 60%;
+    margin-left: 10%;
+    padding-right: 4rem;
+    padding-bottom: 3.7rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
   }
 
   .logo {
